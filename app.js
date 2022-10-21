@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+//const PORT = require("./config");//lo traigo para que funcione en railway
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -41,4 +42,5 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+//app.listen(PORT) //lo pongo para q funcione en railway
 module.exports = app;
