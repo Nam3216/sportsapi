@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const shirtsController=require("../controllers/shirtsController")
 
+
 /* GET users listing. */
 router.get('/', shirtsController.getAll);
 
