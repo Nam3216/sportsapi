@@ -41,6 +41,9 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+var cors = require('cors')
+
+app.use(cors()) // Use this after the variable declaration
 
 /*
 app.use(function (req, res, next) {
