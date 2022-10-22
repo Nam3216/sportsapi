@@ -21,6 +21,7 @@ module.exports.pool=mysql.createPool({
     user:configOk.DB_USER,
     password:configOk.DB_PASSWORD,
     database:configOk.DB_NAME,
+    port:configOk.DB_PORT,
     waitForConnections:true,
     connectionLimit:10,
     queueLimit:0
