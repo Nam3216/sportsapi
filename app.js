@@ -30,7 +30,7 @@ app.use('/shirts', shirtsRouter); //cree ruta shirts
 app.use(function(req, res, next) {
   next(createError(404));
 });
-
+app.use('Access-Control-Allow-Origin','*');
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
@@ -41,11 +41,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-app.use(function(req, res, next) {
-  res.header('Access-Control-Allow-Origin', "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
+
 /*
 app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
