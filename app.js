@@ -30,7 +30,7 @@ app.use('/shirts', shirtsRouter); //cree ruta shirts
 app.use(function(req, res, next) {
   next(createError(404));
 });
-//app.use('Access-Control-Allow-Origin','*');
+app.use('Access-Control-Allow-Origin','*');
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
