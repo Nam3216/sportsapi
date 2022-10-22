@@ -7,7 +7,7 @@ module.exports={
 //el proveedor de la nube me da un usuario, un  pass, un dominio, un  puertto especial, una base de datos (porq un proveedor de nuebe a veces solo te permite crear base de datos en esa pag) asiq lo tengo q poner aca
 
  // lee primero desde sistema variable db_host (no lo da nueb, lo pongo yo cdo haga deploy, si no esvciste usa local host q es lo q uso cdo trabajajo localmente)
-DB_HOST: "%"||"localhost", //si no existe es porq trabajo local, entonces uso lo q esta en mysql.js
+DB_HOST:process.env.DB_HOST ||"localhost", //si no existe es porq trabajo local, entonces uso lo q esta en mysql.js
  DB_USER :process.env.DB_USER ||"root",//si no existe es porq trabajo local, entonces uso lo q esta en mysql.js
  DB_PASSWORD :process.env.DB_PASSWORD ||"stcollins01",//si no existe es porq trabajo local, entonces uso lo q esta en mysql.js
  DB_NAME:process.env.DB_NAME||"sports",//si no existe es porq trabajo local, entonces uso lo q esta en mysql.js RAILQAY DA OTRO NOMBRE DE BASE DE DATOS
@@ -15,5 +15,5 @@ DB_HOST: "%"||"localhost", //si no existe es porq trabajo local, entonces uso lo
 
 }
 
-//process.env.DB_HOST
+
 //en railway db_host necesita dire correcta de mysql, los otros =, osea necesita una base de datos de mysql, ya sea la local o la de rasilway
