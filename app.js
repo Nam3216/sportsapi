@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 //const PORT = require("./config");//lo traigo para que funcione en railway
-
+//esto va en package json start original "start": "node ./bin/www"
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var initRouter = require('./routes/init');//cree ruta init
