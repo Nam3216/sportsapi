@@ -42,5 +42,12 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+app.use(function (req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  next();
+  });
 //app.listen(PORT) //lo pongo para q funcione en railway
 module.exports = app;

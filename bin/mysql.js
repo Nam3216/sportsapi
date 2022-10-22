@@ -2,7 +2,7 @@ const mysql=require("mysql2/promise");
 //import {DB_HOST,DB_NAME,DB_PASSWORD,DB_PORT,DB_USER} from "../config.js"
 const configOk =require("../config")
 
-/*
+/* esto era config original para q se conecte a base datos cdo es local
 module.exports.pool=mysql.createPool({
     host:"localhost",
     user:"root",
@@ -21,7 +21,7 @@ module.exports.pool=mysql.createPool({
     user:configOk.DB_USER,
     password:configOk.DB_PASSWORD,
     database:configOk.DB_NAME,
-    port:configOk.DB_PORT,
+    port:configOk.DB_PORT,//poner si o si port aca, aunq en orig no taba, sino no se conecta a railway base dato
     waitForConnections:true,
     connectionLimit:10,
     queueLimit:0
