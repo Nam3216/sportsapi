@@ -8,6 +8,8 @@ module.exports={
         console.log(fields, "fields")//como prueba para verqes
         return rows //retorna datos
     },
+
+
     createUser:async function(data){//para create, ej, insertar usuarios en tabla users es asi
         console.log(data.password, "bodyyyname")
         let check=false

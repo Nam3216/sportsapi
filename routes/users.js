@@ -7,7 +7,7 @@ router.get('/',usersControllers.getAll);
 
 router.post('/', usersControllers.createUser);
 
-router.get('/login', usersControllers.login);
+router.post('/login', usersControllers.login);
 
 
 
