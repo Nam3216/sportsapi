@@ -17,7 +17,7 @@ module.exports={
         let name=req.body.username
         let password=req.body.password
         let users=await usersModel.createUser(req.body)//tb  lo puedo pasar todo el req.body y despues lo accedo en la funcion q paso
-        res.json("ok")
+        res.json(users)
        
     },
     login:async function(req,res,next){
